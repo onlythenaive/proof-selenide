@@ -15,11 +15,6 @@ version '1.0.0-SNAPSHOT'
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
-bootRun {
-
-    systemProperties = System.properties as Map<String, ?>
-}
-
 repositories {
 
     jcenter()
@@ -29,7 +24,8 @@ dependencies {
 
     // @formatter:off (required to keep the list of dependencies as a table)
 
-    testCompile     group: 'org.springframework.boot',  name: 'spring-boot-starter-test'
+    testCompile     group: 'com.codeborne',     name: 'selenide',   version:'4.8'
+    testCompile     group: 'junit',             name: 'junit',      version:'4.12'
 
     // @formatter:on
 }
