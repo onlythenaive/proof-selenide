@@ -1,0 +1,35 @@
+buildscript {
+
+    repositories {
+
+        jcenter()
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+
+group 'com.iliagubarev.proof'
+version '1.0.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+bootRun {
+
+    systemProperties = System.properties as Map<String, ?>
+}
+
+repositories {
+
+    jcenter()
+}
+
+dependencies {
+
+    // @formatter:off (required to keep the list of dependencies as a table)
+
+    testCompile     group: 'org.springframework.boot',  name: 'spring-boot-starter-test'
+
+    // @formatter:on
+}
